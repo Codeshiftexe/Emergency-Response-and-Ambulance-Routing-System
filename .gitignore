@@ -1,0 +1,102 @@
+# ---------------------------------------------------------------------------
+# OPERA - Optimized Emergency Response Allocation
+# Team Coreshift (T124)
+#
+# Rule of thumb: if `make` can recreate it, it does not belong in git.
+# ---------------------------------------------------------------------------
+
+# Build output --------------------------------------------------------------
+build/
+bin/
+obj/
+
+# Compiled objects and libraries --------------------------------------------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# Executables ---------------------------------------------------------------
+*.exe
+*.out
+*.app
+a.out
+opera
+test_*
+!tests/test_*.cpp
+!tests/test_*.hpp
+
+# Debug and profiling artefacts ---------------------------------------------
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.gcda
+*.gcno
+*.gcov
+core
+vgcore.*
+callgrind.out.*
+perf.data*
+
+# CMake, if the project moves to it later ------------------------------------
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile.cmake
+cmake-build-*/
+compile_commands.json
+
+# Editors and IDEs ----------------------------------------------------------
+.vscode/
+.idea/
+*.iml
+.cache/
+.clangd/
+*.code-workspace
+*.swp
+*.swo
+*~
+.vs/
+*.vcxproj.user
+
+# Operating system junk -----------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Generated output ----------------------------------------------------------
+# Visualisation and state dumps the engine writes at runtime. The renderer
+# recreates these on every run, so committing them would only create conflicts.
+*.dot
+*.png
+*.svg
+state.json
+route.json
+output/
+logs/
+*.log
+
+# Local configuration -------------------------------------------------------
+# Never commit real credentials. Commit config.example.json instead, with
+# placeholder values, so a teammate knows what keys are expected.
+config.local.json
+.env
+.env.*
+secrets.*
+*.key
+*.pem
+
+# Archives ------------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.rar
